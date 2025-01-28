@@ -1,0 +1,93 @@
+/* General Styling */
+body {
+    font-family: Georgia, Garamond, serif;
+    font-size: 11pt;
+    color: #404040;
+    background: url('silverware.jpg') repeat fixed;
+    margin: 20px;
+    padding: 20px;
+    border: 5px solid #A4A400; 
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+header {
+    background-color: #F0F0F0;
+    text-align: center;
+    padding: 10px 0;
+}
+
+header h1 {
+    font-family: "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+    font-size: 22pt;
+    font-weight: bold;
+    color: #A4A400;
+    text-decoration: underline;
+    margin: 0;
+}
+
+h2 {
+    background-color: #F0F0F0;
+    color: #A4A400;
+    font-family: "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+    font-size: 18pt;
+    text-decoration: underline;
+    margin: 20px 0;
+    padding: 5px;
+    display: inline-block; /* Extra Feature: Tight background */
+}
+
+ul {
+    margin: 0 0 20px 20px;
+    padding: 0;
+    list-style-image: url('pie_bullet.png'); /* Extra Feature: Custom bullet */
+}
+
+blockquote {
+    background-color: #FFFFA8;
+    margin: 20px;
+    padding: 10px;
+    font-style: italic;
+    border-left: 5px solid #A4A400;
+}
+
+blockquote footer {
+    font-style: normal;
+    text-align: right;
+    color: #404040;
+}
+
+a {
+    color: #A4A400;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer pre {
+    font-family: "Courier New", monospace;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #F0F0F0;
+    padding: 10px;
+}
+
+
+/* Directions Ordered List */
+ol.directions {
+    margin: 20px 0;
+    padding-left: 40px;
+    list-style-type: decimal;
+}
+
+ol.directions > li {
+    margin-bottom: 10px;
+}
+
+ul.sub-directions {
+    margin: 10px 0; 
+    padding-left: 40px;
+    list-style-image: url('pie_bullet.png');
+}
