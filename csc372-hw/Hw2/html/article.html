@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+   <head>
+
+    <style>
+        /* ======================= ARTICLE PAGE STYLING ======================= */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Container */
+        .article-container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #222;
+        }
+
+        /* =================== ARTICLE SECTION =================== */
+        .article {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .article h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        .article p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .article img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        /* Read More Button */
+        .read-more {
+            background: #ff4500;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .read-more:hover {
+            background: #e03e00;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .article-container {
+                width: 95%;
+            }
+        }
+    </style>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>About</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- font css -->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   </head>
+   <body>
+      <div class="header_section header_bg">
+         <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <a class="navbar-brand"href="index.html"><img src="images/logo.png"></a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                     </li>
+                     <li class="nav-item active">
+                        <a class="nav-link" href="Explore.html">Explore</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="mealplan.html">Meal Plan</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="article.html">Article</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                     </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                     <div class="login_bt">
+                        <ul>
+                           <li><a href="#"><span class="user_icon"><i class="fa fa-user" aria-hidden="true"></i></span>Login</a></li>
+                           <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                        </ul>
+                     </div>
+                  </form>
+               </div>
+            </nav>
+         </div>
+      </div>
+      <!-- header section end -->
+
+      <div class="article-container">
+        <h1>Foodie Insights: What's Cooking Near UNCG?</h1>
+
+        <!-- Article 1 -->
+        <div class="article">
+            <h2>🔥 New Promo at Chick-fil-A - Free Nuggets Day!</h2>
+            <p>Craving some crispy nuggets? Good news! Chick-fil-A at Elliott University Center is offering a **Free 8-Piece Nugget** with any mobile order this Friday. Don’t miss out on this delicious deal!</p>
+            <img src="images/chickfila-nuggets.jpg" alt="Chick-fil-A Nuggets">
+            <button class="read-more" onclick="showMore('promo')">Read More</button>
+        </div>
+
+        <!-- Article 2 -->
+        <div class="article">
+            <h2>🍕 Late Night Pizza Cravings? New York Pizza Stays Open Until 2 AM!</h2>
+            <p>Studying late? Need a quick bite? **New York Pizza** is now serving their famous cheesy slices till 2 AM! Try their **Pepperoni Overload** or **Four Cheese Delight** and power through your assignments with a full stomach.</p>
+            <img src="images/ny-pizza.jpg" alt="New York Pizza">
+            <button class="read-more" onclick="showMore('pizza')">Read More</button>
+        </div>
+
+        <!-- Article 3 -->
+        <div class="article">
+            <h2>☕ Coffeeology Introduces New Seasonal Drinks!</h2>
+            <p>It’s finally here! **Pumpkin Spice Latte** and **Salted Caramel Cold Brew** are now available at **Coffeeology**. Swing by and sip on the taste of fall while studying!</p>
+            <img src="images/coffeeology-drink.jpg" alt="Coffeeology Drinks">
+            <button class="read-more" onclick="showMore('coffee')">Read More</button>
+        </div>
+
+        <!-- Article 4 -->
+        <div class="article">
+            <h2>🥗 Boba House Expands Menu with More Vegan Options</h2>
+            <p>UNCG's favorite vegetarian restaurant just got better! **Boba House** has added new plant-based dishes like **Vegan Pad Thai** and **BBQ Jackfruit Banh Mi**. Perfect for those looking for a delicious meat-free meal.</p>
+            <img src="images/boba-house.jpg" alt="Boba House Vegan Meal">
+            <button class="read-more" onclick="showMore('vegan')">Read More</button>
+        </div>
+
+        <!-- Article 5 -->
+        <div class="article">
+            <h2>🥡 Sushi Republic's All-You-Can-Eat Sushi Night!</h2>
+            <p>Are you a sushi lover? Every **Wednesday from 5 PM to 9 PM**, **Sushi Republic** is offering **All-You-Can-Eat Sushi** for just **$19.99**! Try their fresh **Salmon Rolls, Spicy Tuna, and Eel Nigiri**.</p>
+            <img src="images/sushi-republic.jpg" alt="Sushi Republic Sushi">
+            <button class="read-more" onclick="showMore('sushi')">Read More</button>
+        </div>
+    </div>
+
+    <script>
+        function showMore(articleId) {
+            alert("More details coming soon about: " + articleId);
+        }
+    </script>
+
+
+
+
+
+    
+
+
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+   </body>
+</html>
