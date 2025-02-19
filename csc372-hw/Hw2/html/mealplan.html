@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+   <head>
+
+    <style>
+        /* ======================= MEAL PLAN STYLING ======================= */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Container */
+        .mealplan-container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        /* Flex Layout */
+        .mealplan-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 30px;
+        }
+
+        /* =================== DISH LIST (LEFT SIDE) =================== */
+        .mealplan-dishes {
+            flex: 1;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .mealplan-dishes h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .mealplan-dishes ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .mealplan-dishes li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f0f0f0;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .mealplan-dishes button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .mealplan-dishes button:hover {
+            background: #218838;
+        }
+
+        /* =================== MEAL PLAN (RIGHT SIDE) =================== */
+        .mealplan-summary {
+            flex: 1;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .mealplan-summary h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .mealplan-summary ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .mealplan-summary li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f0f0f0;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .mealplan-summary button {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .mealplan-summary button:hover {
+            background: #c82333;
+        }
+
+        /* Total Cost */
+        h3 {
+            font-size: 20px;
+            margin-top: 15px;
+            color: #222;
+        }
+
+        #mealplan-total {
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .mealplan-flex {
+                flex-direction: column;
+            }
+
+            .mealplan-dishes, .mealplan-summary {
+                width: 100%;
+            }
+        }
+    </style>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>About</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- font css -->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   </head>
+   <body>
+      <div class="header_section header_bg">
+         <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <a class="navbar-brand"href="index.html"><img src="images/logo.png"></a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                     </li>
+                     <li class="nav-item active">
+                        <a class="nav-link" href="Explore.html">Explore</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="mealplan.html">Meal Plan</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="article.html">Article</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                     </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                     <div class="login_bt">
+                        <ul>
+                           <li><a href="#"><span class="user_icon"><i class="fa fa-user" aria-hidden="true"></i></span>Login</a></li>
+                           <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                        </ul>
+                     </div>
+                  </form>
+               </div>
+            </nav>
+         </div>
+      </div>
+      <!-- header section end -->
+
+    
+
+      <!--  Meal Plan code begginig   -->
+
+      <div class="container">
+        <h1>📋 Create Your Meal Plan</h1>
+    
+        <div class="mealplan-container">
+            <!-- Dish Selection List -->
+            <div class="dish-list">
+                <h2>🍽️ Available Dishes</h2>
+                <ul id="dish-menu">
+                    <!-- Dynamically added dishes -->
+                </ul>
+            </div>
+    
+            <!-- Meal Plan Section -->
+            <div class="meal-plan">
+                <h2>📅 Your Meal Plan</h2>
+                <ul id="selected-meals">
+                    <!-- Dynamically added selected meals -->
+                </ul>
+                <h3>Total Cost: $<span id="total-cost">0.00</span></h3>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    // Dishes Available for Meal Planning
+    const dishes = {
+        whopper: { name: "Whopper", price: 4.99 },
+        chicken_fries: { name: "Chicken Fries", price: 3.49 },
+        oreo_shake: { name: "Oreo Shake", price: 2.99 },
+        buffalo_wings: { name: "Buffalo Wings", price: 8.99 },
+        loaded_nachos: { name: "Loaded Nachos", price: 7.99 },
+        cheeseburger: { name: "Cheeseburger", price: 5.99 },
+        burrito: { name: "Burrito", price: 9.99 },
+        bowl: { name: "Bowl", price: 8.99 },
+        tacos: { name: "Tacos", price: 7.49 },
+        vito_sub: { name: "Vito Sub", price: 6.99 },
+        turkey_tom: { name: "Turkey Tom", price: 6.49 },
+        bootlegger_club: { name: "Bootlegger Club", price: 7.99 },
+        chicken_sandwich: { name: "Chicken Sandwich", price: 4.99 },
+        nuggets: { name: "Chicken Nuggets", price: 5.49 },
+        spicy_deluxe: { name: "Spicy Deluxe Sandwich", price: 6.49 },
+        traditional_wings: { name: "Traditional Wings", price: 8.99 },
+        boneless_wings: { name: "Boneless Wings", price: 7.99 },
+        loaded_fries: { name: "Loaded Fries", price: 5.99 }
+    };
+    
+    // Function to generate the dish list
+    function populateDishMenu() {
+        const dishMenu = document.getElementById("dish-menu");
+        Object.keys(dishes).forEach(dishKey => {
+            const dishItem = document.createElement("li");
+            dishItem.innerHTML = `${dishes[dishKey].name} - $${dishes[dishKey].price.toFixed(2)}
+                <button onclick="addToMealPlan('${dishKey}')">➕ Add</button>`;
+            dishMenu.appendChild(dishItem);
+        });
+    }
+    
+    // Function to add dish to meal plan
+    let mealPlan = {};
+    let totalCost = 0;
+    
+    function addToMealPlan(dishKey) {
+        if (!mealPlan[dishKey]) {
+            mealPlan[dishKey] = { name: dishes[dishKey].name, price: dishes[dishKey].price, quantity: 1 };
+        } else {
+            mealPlan[dishKey].quantity++;
+        }
+        updateMealPlan();
+    }
+    
+    // Function to update meal plan display
+    function updateMealPlan() {
+        const mealList = document.getElementById("selected-meals");
+        mealList.innerHTML = "";
+        totalCost = 0;
+    
+        Object.keys(mealPlan).forEach(dishKey => {
+            const mealItem = document.createElement("li");
+            const meal = mealPlan[dishKey];
+    
+            totalCost += meal.price * meal.quantity;
+    
+            mealItem.innerHTML = `${meal.name} x${meal.quantity} - $${(meal.price * meal.quantity).toFixed(2)}
+                <button onclick="increaseQuantity('${dishKey}')">➕</button>
+                <button onclick="removeFromMealPlan('${dishKey}')">❌</button>`;
+            mealList.appendChild(mealItem);
+        });
+    
+        document.getElementById("total-cost").innerText = totalCost.toFixed(2);
+    }
+    
+    // Function to increase quantity
+    function increaseQuantity(dishKey) {
+        mealPlan[dishKey].quantity++;
+        updateMealPlan();
+    }
+    
+    // Function to remove dish from meal plan
+    function removeFromMealPlan(dishKey) {
+        delete mealPlan[dishKey];
+        updateMealPlan();
+    }
+    
+    // Initialize menu on page load
+    document.addEventListener("DOMContentLoaded", populateDishMenu);
+    </script>
+
+
+
+
+      <!-- Meal Plan code end    -->
+
+
+               <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+               <i class="fa fa-arrow-left"></i>
+               </a>
+               <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+               <i class="fa fa-arrow-right"></i>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- coffee section end -->
+
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+   </body>
+</html>

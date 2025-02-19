@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>About</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- font css -->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   </head>
+   <body>
+      <div class="header_section header_bg">
+         <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <a class="navbar-brand"href="index.html"><img src="images/logo.png"></a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                     </li>
+                     <li class="nav-item active">
+                        <a class="nav-link" href="Explore.html">Explore</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="mealplan.html">Meal Plan</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="article.html">Article</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                     </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                     <div class="login_bt">
+                        <ul>
+                           <li><a href="#"><span class="user_icon"><i class="fa fa-user" aria-hidden="true"></i></span>Login</a></li>
+                           <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                        </ul>
+                     </div>
+                  </form>
+               </div>
+            </nav>
+         </div>
+      </div>
+      <!-- header section end -->
+
+      <!-- Section coming on top of it after the clickin' the category button -->
+
+      <div class="container">
+         <!-- Establishment 1: Tate St. Coffee House -->
+         <div class="establishment">
+             <h2>Tate St. Coffee House</h2>
+             <p><strong>Location:</strong> 334 Tate St, Greensboro, NC 27403</p>
+             <p><strong>Specialties:</strong> Organic fair-trade coffee, teas, and light bites. Often features live music events.</p>
+             <p><strong>Hours:</strong> 7:00 AM - 7:00 PM (Mon-Sat), 8:00 AM - 5:00 PM (Sun)</p>
+             <div class="dishes">
+                 <div class="dish" onclick="showDishDetails('latte', this.closest('.establishment'))">
+                     <img src="images/latte.jpg" alt="Latte">
+                     <p>Latte</p>
+                 </div>
+                 <div class="dish" onclick="showDishDetails('mocha', this.closest('.establishment'))">
+                     <img src="images/mocha.jpg" alt="Mocha">
+                     <p>Mocha</p>
+                 </div>
+                 <div class="dish" onclick="showDishDetails('pastry', this.closest('.establishment'))">
+                     <img src="images/pastry.jpg" alt="Pastry">
+                     <p>Pastry</p>
+                 </div>
+             </div>
+         </div>
+     
+         <!-- Establishment 2: Coffeeology -->
+         <div class="establishment">
+             <h2>Coffeeology</h2>
+             <p><strong>Location:</strong> 423 Tate St, Greensboro, NC 27403</p>
+             <p><strong>Specialties:</strong> A variety of coffee drinks, teas, paninis, and gelato.</p>
+             <p><strong>Hours:</strong> 8:00 AM - 8:00 PM daily</p>
+             <div class="dishes">
+                 <div class="dish" onclick="showDishDetails('cold_brew', this.closest('.establishment'))">
+                     <img src="images/cold_brew.jpg" alt="Cold Brew">
+                     <p>Cold Brew</p>
+                 </div>
+                 <div class="dish" onclick="showDishDetails('matcha_latte', this.closest('.establishment'))">
+                     <img src="images/matcha_latte.jpg" alt="Matcha Latte">
+                     <p>Matcha Latte</p>
+                 </div>
+                 <div class="dish" onclick="showDishDetails('panini', this.closest('.establishment'))">
+                     <img src="images/panini.jpg" alt="Panini">
+                     <p>Panini</p>
+                 </div>
+             </div>
+         </div>
+     </div>
+     
+     <script>
+     function showDishDetails(dish, establishmentElement) {
+         const dishes = {
+             // Tate St. Coffee House
+             latte: {
+                 title: 'Latte',
+                 image: 'images/latte.jpg',
+                 description: 'Smooth espresso with steamed milk and a light layer of foam.',
+                 price: '$4.50'
+             },
+             mocha: {
+                 title: 'Mocha',
+                 image: 'images/mocha.jpg',
+                 description: 'Rich espresso combined with chocolate and steamed milk.',
+                 price: '$5.00'
+             },
+             pastry: {
+                 title: 'Pastry',
+                 image: 'images/pastry.jpg',
+                 description: 'Freshly baked, flaky and buttery croissant with a hint of sweetness.',
+                 price: '$3.99'
+             },
+     
+             // Coffeeology
+             cold_brew: {
+                 title: 'Cold Brew',
+                 image: 'images/cold_brew.jpg',
+                 description: 'Smooth and bold cold brew coffee, steeped for 24 hours.',
+                 price: '$4.99'
+             },
+             matcha_latte: {
+                 title: 'Matcha Latte',
+                 image: 'images/matcha_latte.jpg',
+                 description: 'A creamy and earthy green tea latte with a hint of sweetness.',
+                 price: '$5.50'
+             },
+             panini: {
+                 title: 'Panini',
+                 image: 'images/panini.jpg',
+                 description: 'Toasted sandwich with fresh mozzarella, tomato, and basil.',
+                 price: '$6.99'
+             }
+         };
+     
+         const dishDetails = dishes[dish];
+     
+         // Check if an existing dish details section already exists under this establishment
+         let existingDetails = establishmentElement.querySelector('.dish-details');
+     
+         if (existingDetails) {
+             // If the same dish is clicked, toggle visibility
+             if (existingDetails.dataset.dish === dish) {
+                 existingDetails.remove();
+                 return;
+             } else {
+                 // If another dish is clicked, update the content
+                 existingDetails.dataset.dish = dish;
+                 existingDetails.querySelector('.dish-title').innerText = dishDetails.title;
+                 existingDetails.querySelector('.dish-image').src = dishDetails.image;
+                 existingDetails.querySelector('.dish-description').innerText = dishDetails.description;
+                 existingDetails.querySelector('.dish-price').innerText = dishDetails.price;
+                 return;
+             }
+         }
+     
+         // Remove any existing dish details from other establishments before adding a new one
+         document.querySelectorAll('.dish-details').forEach(detail => detail.remove());
+     
+         // Create a new details section
+         const detailsDiv = document.createElement('div');
+         detailsDiv.className = 'dish-details';
+         detailsDiv.dataset.dish = dish;
+         detailsDiv.innerHTML = `
+             <h3 class="dish-title">${dishDetails.title}</h3>
+             <img class="dish-image" src="${dishDetails.image}" alt="${dishDetails.title}">
+             <p class="dish-description">${dishDetails.description}</p>
+             <p class="dish-price">${dishDetails.price}</p>
+         `;
+     
+         // Insert the details directly **after** the clicked establishment
+         establishmentElement.appendChild(detailsDiv);
+     }
+     </script>
+
+      <!-- The end of the click section, the other section must load underneath -->
+
+
+
+
+
+      <!-- Food explore section starts here-->
+      <div class="coffee_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <h1 class="coffee_taital">BEST EATS NEAR UNCG</h1>
+               <div class="bulit_icon"><img src="images/bulit-icon.png"></div>
+            </div>
+         </div>
+         <div class="coffee_section_2">
+            <div id="main_slider" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="container-fluid">
+                        <div class="row">
+                           <div class="col-lg-3 col-md-6">
+                              <div class="coffee_img"><img src="images/img-1.png"></div>
+                              <h3 class="types_text">Fast Food & Chain Restaurants 🍔🍟 </h3>
+                              <p class="looking_text">Quick, tasty, and satisfying meals for when you're on the go!
+
+                              </p>
+                              <div class="read_bt"><a href="Expand1.html">Locations</a></div>
+                           </div>
+                           <div class="col-lg-3 col-md-6">
+                              <div class="coffee_img"><img src="images/img-2.png"></div>
+                              <h3 class="types_text">Coffee Shops & Cafés ☕🍪</h3>
+                              <p class="looking_text">Cozy cafés and sweet treats to fuel your study sessions!                              </p>
+                              <div class="read_bt"><a href="Expand2.html">Locations</a></div>
+                           </div>
+                           <div class="col-lg-3 col-md-6">
+                              <div class="coffee_img"><img src="images/img-3.png"></div>
+                              <h3 class="types_text">Asian & International Cuisine 🍣🥢</h3>
+                              <p class="looking_text">A world of flavors, from sushi to spicy curries, right near campus!                              </p>
+                              <div class="read_bt"><a href="Expand3.html">Locations</a></div>
+                           </div>
+                           <div class="col-lg-3 col-md-6">
+                              <div class="coffee_img"><img src="images/img-4.png"></div>
+                              <h3 class="types_text">Pizza & Italian 🍕🍝</h3>
+                              <p class="looking_text">Cheesy, saucy, and absolutely delicious – the best pizza & pasta around!                              </p>
+                              <div class="read_bt"><a href="Expand4.html">Locations</a></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container-fluid">
+                        <div class="row">
+                           <div class="col-lg-3 col-md-6">
+                              <div class="coffee_img"><img src="images/img-5.png"></div>
+                              <h3 class="types_text">Grocery & Convenience Stores 🛒🥪</h3>
+                              <p class="looking_text">Grab snacks, essentials, and quick bites whenever you need!                              </p>
+                              <div class="read_bt"><a href="Expand5.html">Locations</a></div>
+                           </div>
+                           <div class="col-lg-3 col-md-6">
+                              <div class="coffee_img"><img src="images/img-6.png"></div>
+                              <h3 class="types_text">Campus Dining 🍽️🎓</h3>
+                              <p class="looking_text">Easy, accessible, and student-friendly dining options on campus!                              </p>
+                              <div class="read_bt"><a href="Expand6.html">Locations</a></div>
+                           </div>
+                           <div class="col-lg-3 col-md-6">
+                              <div class="coffee_img"><img src="images/img-7.png"></div>
+                              <h3 class="types_text">Healthy & Vegetarian Options 🥗🌿</h3>
+                              <p class="looking_text">Wholesome, fresh, and plant-based meals to keep you energized!                              </p>
+                              <div class="read_bt"><a href="Expand7.html">Locations</a></div>
+                           </div>
+                           <div class="col-lg-3 col-md-6">
+                              <div class="coffee_img"><img src="images/img-8.png"></div>
+                              <h3 class="types_text">Late Night & Quick Bites 🌙🌮</h3>
+                              <p class="looking_text">Midnight cravings? These spots have you covered!                              </p>
+                              <div class="read_bt"><a href="Expand8.html">Locations</a></div>
+                           </div>
+                          
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+               <i class="fa fa-arrow-left"></i>
+               </a>
+               <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+               <i class="fa fa-arrow-right"></i>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- coffee section end -->
+
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+   </body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>About</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- font css -->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   </head>
+   <body>
+      <div class="header_section header_bg">
+         <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <a class="navbar-brand"href="index.html"><img src="images/logo.png"></a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                     </li>
+                     <li class="nav-item active">
+                        <a class="nav-link" href="Explore.html">Explore</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="mealplan.html">Meal Plan</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="article.html">Article</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                     </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                     <div class="login_bt">
+                        <ul>
+                           <li><a href="#"><span class="user_icon"><i class="fa fa-user" aria-hidden="true"></i></span>Login</a></li>
+                           <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                        </ul>
+                     </div>
+                  </form>
+               </div>
+            </nav>
+         </div>
+      </div>
+      <!-- header section end -->
+
+      <!-- Section coming on top of it after the clickin' the category button -->
+
+   <!-- Establishment 1: New York Pizza -->
+   <div class="establishment">
+      <h2>New York Pizza</h2>
+      <p><strong>Location:</strong> 337 Tate St, Greensboro, NC 27403</p>
+      <p><strong>Specialties:</strong> Authentic New York-style pizza and subs.</p>
+      <p><strong>Hours:</strong> 11:00 AM - 10:00 PM (Daily)</p>
+      <div class="dishes">
+          <div class="dish" onclick="showDishDetails('ny_cheese_pizza', this.closest('.establishment'))">
+              <img src="images/ny_cheese_pizza.jpg" alt="New York Cheese Pizza">
+              <p>New York Cheese Pizza</p>
+          </div>
+          <div class="dish" onclick="showDishDetails('meat_lovers_pizza', this.closest('.establishment'))">
+              <img src="images/meat_lovers_pizza.jpg" alt="Meat Lovers Pizza">
+              <p>Meat Lovers Pizza</p>
+          </div>
+          <div class="dish" onclick="showDishDetails('philly_cheese_steak', this.closest('.establishment'))">
+              <img src="images/philly_cheese_steak.jpg" alt="Philly Cheese Steak Sub">
+              <p>Philly Cheese Steak Sub</p>
+          </div>
+      </div>
+  </div>
+
+  <!-- Establishment 2: Slices Pizza by Tony -->
+  <div class="establishment">
+      <h2>Slices Pizza by Tony</h2>
+      <p><strong>Location:</strong> 401 Tate St, Greensboro, NC 27403</p>
+      <p><strong>Specialties:</strong> Hand-tossed pizzas, pasta, and calzones.</p>
+      <p><strong>Hours:</strong> 10:30 AM - 11:00 PM (Daily)</p>
+      <div class="dishes">
+          <div class="dish" onclick="showDishDetails('pepperoni_pizza', this.closest('.establishment'))">
+              <img src="images/pepperoni_pizza.jpg" alt="Pepperoni Pizza">
+              <p>Pepperoni Pizza</p>
+          </div>
+          <div class="dish" onclick="showDishDetails('spaghetti_meatballs', this.closest('.establishment'))">
+              <img src="images/spaghetti_meatballs.jpg" alt="Spaghetti & Meatballs">
+              <p>Spaghetti & Meatballs</p>
+          </div>
+          <div class="dish" onclick="showDishDetails('calzone', this.closest('.establishment'))">
+              <img src="images/calzone.jpg" alt="Cheese Calzone">
+              <p>Cheese Calzone</p>
+          </div>
+      </div>
+  </div>
+
+  <!-- Establishment 3: Manhattan Pizza & Subs -->
+  <div class="establishment">
+      <h2>Manhattan Pizza & Subs</h2>
+      <p><strong>Location:</strong> 3726 Battleground Ave, Greensboro, NC 27410</p>
+      <p><strong>Specialties:</strong> Deli sandwiches, pizzas, pastas, and calzones.</p>
+      <p><strong>Hours:</strong> 10:30 AM - 10:00 PM (Daily)</p>
+      <div class="dishes">
+          <div class="dish" onclick="showDishDetails('manhattan_special_pizza', this.closest('.establishment'))">
+              <img src="images/manhattan_special_pizza.jpg" alt="Manhattan Special Pizza">
+              <p>Manhattan Special Pizza</p>
+          </div>
+          <div class="dish" onclick="showDishDetails('lasagna', this.closest('.establishment'))">
+              <img src="images/lasagna.jpg" alt="Lasagna">
+              <p>Lasagna</p>
+          </div>
+          <div class="dish" onclick="showDishDetails('italian_sub', this.closest('.establishment'))">
+              <img src="images/italian_sub.jpg" alt="Italian Sub">
+              <p>Italian Sub</p>
+          </div>
+      </div>
+  </div>
+
+  <!-- Establishment 4: Don Gala Pizzeria -->
+  <div class="establishment">
+      <h2>Don Gala Pizzeria</h2>
+      <p><strong>Location:</strong> 4900 W Market St, Greensboro, NC 27407</p>
+      <p><strong>Specialties:</strong> Pizzas, subs, and wings.</p>
+      <p><strong>Hours:</strong> 11:00 AM - 11:00 PM (Daily)</p>
+      <div class="dishes">
+          <div class="dish" onclick="showDishDetails('bbq_chicken_pizza', this.closest('.establishment'))">
+              <img src="images/bbq_chicken_pizza.jpg" alt="BBQ Chicken Pizza">
+              <p>BBQ Chicken Pizza</p>
+          </div>
+          <div class="dish" onclick="showDishDetails('buffalo_wings', this.closest('.establishment'))">
+              <img src="images/buffalo_wings.jpg" alt="Buffalo Wings">
+              <p>Buffalo Wings</p>
+          </div>
+          <div class="dish" onclick="showDishDetails('steak_sub', this.closest('.establishment'))">
+              <img src="images/steak_sub.jpg" alt="Steak & Cheese Sub">
+              <p>Steak & Cheese Sub</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+<script>
+function showDishDetails(dish, establishmentElement) {
+  const dishes = {
+      ny_cheese_pizza: { title: 'New York Cheese Pizza', image: 'images/ny_cheese_pizza.jpg', description: 'Classic hand-tossed cheese pizza with rich tomato sauce.', price: '$10.99' },
+      meat_lovers_pizza: { title: 'Meat Lovers Pizza', image: 'images/meat_lovers_pizza.jpg', description: 'Loaded with pepperoni, sausage, bacon, and ham.', price: '$12.99' },
+      philly_cheese_steak: { title: 'Philly Cheese Steak Sub', image: 'images/philly_cheese_steak.jpg', description: 'Sliced steak, melted cheese, peppers, and onions.', price: '$8.49' },
+
+      pepperoni_pizza: { title: 'Pepperoni Pizza', image: 'images/pepperoni_pizza.jpg', description: 'Topped with zesty pepperoni slices.', price: '$11.99' },
+      spaghetti_meatballs: { title: 'Spaghetti & Meatballs', image: 'images/spaghetti_meatballs.jpg', description: 'Homemade marinara with Italian meatballs over spaghetti.', price: '$9.99' },
+      calzone: { title: 'Cheese Calzone', image: 'images/calzone.jpg', description: 'Stuffed with ricotta, mozzarella, and Parmesan cheese.', price: '$8.99' },
+
+      manhattan_special_pizza: { title: 'Manhattan Special Pizza', image: 'images/manhattan_special_pizza.jpg', description: 'House-special pizza with fresh toppings.', price: '$13.99' },
+      lasagna: { title: 'Lasagna', image: 'images/lasagna.jpg', description: 'Layered pasta with rich meat sauce and melted cheese.', price: '$10.99' },
+      italian_sub: { title: 'Italian Sub', image: 'images/italian_sub.jpg', description: 'Salami, ham, provolone, lettuce, tomato, and oil & vinegar.', price: '$7.99' },
+
+      bbq_chicken_pizza: { title: 'BBQ Chicken Pizza', image: 'images/bbq_chicken_pizza.jpg', description: 'Smoky BBQ sauce, grilled chicken, and red onions.', price: '$12.99' },
+      buffalo_wings: { title: 'Buffalo Wings', image: 'images/buffalo_wings.jpg', description: 'Crispy wings tossed in classic buffalo sauce.', price: '$9.99' },
+      steak_sub: { title: 'Steak & Cheese Sub', image: 'images/steak_sub.jpg', description: 'Grilled steak with melted provolone on a toasted bun.', price: '$8.49' }
+  };
+
+  let detailsDiv = establishmentElement.querySelector('.dish-details');
+  if (!detailsDiv) {
+      detailsDiv = document.createElement('div');
+      detailsDiv.className = 'dish-details';
+      establishmentElement.appendChild(detailsDiv);
+  }
+  detailsDiv.innerHTML = `<h3>${dishes[dish].title}</h3><img src="${dishes[dish].image}" alt="${dishes[dish].title}"><p>${dishes[dish].description}</p><p>${dishes[dish].price}</p>`;
+}
+</script>
+     
+
+      <!-- The end of the click section, the other section must load underneath -->
+
+
+
+
+
+      <!-- Food explore section starts here-->
+      <div class="coffee_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <h1 class="coffee_taital">BEST EATS NEAR UNCG</h1>
+               <div class="bulit_icon"><img src="images/bulit-icon.png"></div>
+            </div>
+         </div>
+         <div class="coffee_section_2">
+            <div id="main_slider" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="container-fluid">
+                        <div class="row">
+                           <div class="col-lg-3 col-md-6">
+                              <div class="coffee_img"><img src="images/img-1.png"></div>
+                              <h3 class="types_text">Fast Food & Chain Restaurants 🍔🍟 </h3>
+                              <p class="looking_text">Quick, tasty, and satisfying meals for when you're on the go!
+
+                              </p>
+                              <div class="read_bt"><a href="Expand1.html">Locations</a></div>
+                           </div>
+                           <div class="col-lg-3 col-md-6">
+                              <div class="coffee_img"><img src="images/img-2.png"></div>
+                              <h3 class="types_text">Coffee Shops & Cafés ☕🍪</h3>
+                              <p class="looking_text">Cozy cafés and sweet treats to fuel your study sessions!                              </p>
+                              <div class="read_bt"><a href="Expand2.html">Locations</a></div>
+                           </div>
+                           <div class="col-lg-3 col-md-6">
+                              <div class="coffee_img"><img src="images/img-3.png"></div>
+                              <h3 class="types_text">Asian & International Cuisine 🍣🥢</h3>
+                              <p class="looking_text">A world of flavors, from sushi to spicy curries, right near campus!                              </p>
+                              <div class="read_bt"><a href="Expand3.html">Locations</a></div>
+                           </div>
+                           <div class="col-lg-3 col-md-6">
+                              <div class="coffee_img"><img src="images/img-4.png"></div>
+                              <h3 class="types_text">Pizza & Italian 🍕🍝</h3>
+                              <p class="looking_text">Cheesy, saucy, and absolutely delicious – the best pizza & pasta around!                              </p>
+                              <div class="read_bt"><a href="Expand4.html">Locations</a></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container-fluid">
+                        <div class="row">
+                           <div class="col-lg-3 col-md-6">
+                              <div class="coffee_img"><img src="images/img-5.png"></div>
+                              <h3 class="types_text">Grocery & Convenience Stores 🛒🥪</h3>
+                              <p class="looking_text">Grab snacks, essentials, and quick bites whenever you need!                              </p>
+                              <div class="read_bt"><a href="Expand5.html">Locations</a></div>
+                           </div>
+                           <div class="col-lg-3 col-md-6">
+                              <div class="coffee_img"><img src="images/img-6.png"></div>
+                              <h3 class="types_text">Campus Dining 🍽️🎓</h3>
+                              <p class="looking_text">Easy, accessible, and student-friendly dining options on campus!                              </p>
+                              <div class="read_bt"><a href="Expand6.html">Locations</a></div>
+                           </div>
+                           <div class="col-lg-3 col-md-6">
+                              <div class="coffee_img"><img src="images/img-7.png"></div>
+                              <h3 class="types_text">Healthy & Vegetarian Options 🥗🌿</h3>
+                              <p class="looking_text">Wholesome, fresh, and plant-based meals to keep you energized!                              </p>
+                              <div class="read_bt"><a href="Expand7.html">Locations</a></div>
+                           </div>
+                           <div class="col-lg-3 col-md-6">
+                              <div class="coffee_img"><img src="images/img-8.png"></div>
+                              <h3 class="types_text">Late Night & Quick Bites 🌙🌮</h3>
+                              <p class="looking_text">Midnight cravings? These spots have you covered!                              </p>
+                              <div class="read_bt"><a href="Expand8.html">Locations</a></div>
+                           </div>
+                          
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+               <i class="fa fa-arrow-left"></i>
+               </a>
+               <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+               <i class="fa fa-arrow-right"></i>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- coffee section end -->
+
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+   </body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>About</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- font css -->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   </head>
+   <body>
+      <div class="header_section header_bg">
+         <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <a class="navbar-brand"href="index.html"><img src="images/logo.png"></a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                     </li>
+                     <li class="nav-item active">
+                        <a class="nav-link" href="Explore.html">Explore</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="mealplan.html">Meal Plan</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="article.html">Article</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                     </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                     <div class="login_bt">
+                        <ul>
+                           <li><a href="#"><span class="user_icon"><i class="fa fa-user" aria-hidden="true"></i></span>Login</a></li>
+                           <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                        </ul>
+                     </div>
+                  </form>
+               </div>
+            </nav>
+         </div>
+      </div>
+      <!-- header section end -->
+
+      <!-- Section coming on top of it after the clickin' the category button -->
+
+     
+         <!-- Establishment 1: Elliott University Center (EUC) -->
+         <div class="establishment">
+             <h2>Elliott University Center (EUC)</h2>
+             <p><strong>Location:</strong> UNCG Campus, Greensboro, NC 27412</p>
+             <p><strong>Specialties:</strong> Campus food court with multiple dining options.</p>
+             <p><strong>Hours:</strong> 7:00 AM - 9:00 PM (Mon-Fri), 8:00 AM - 8:00 PM (Sat-Sun)</p>
+             <div class="dishes">
+                 <div class="dish" onclick="showDishDetails('chicken_wrap', this.closest('.establishment'))">
+                     <img src="images/chicken_wrap.jpg" alt="Grilled Chicken Wrap">
+                     <p>Grilled Chicken Wrap</p>
+                 </div>
+                 <div class="dish" onclick="showDishDetails('veggie_bowl', this.closest('.establishment'))">
+                     <img src="images/veggie_bowl.jpg" alt="Veggie Bowl">
+                     <p>Veggie Bowl</p>
+                 </div>
+                 <div class="dish" onclick="showDishDetails('fruit_parfait', this.closest('.establishment'))">
+                     <img src="images/fruit_parfait.jpg" alt="Fruit Parfait">
+                     <p>Fruit Parfait</p>
+                 </div>
+             </div>
+         </div>
+     
+         <!-- Establishment 2: Pita Delite Express -->
+         <div class="establishment">
+             <h2>Pita Delite Express</h2>
+             <p><strong>Location:</strong> Elliott University Center, UNCG Campus</p>
+             <p><strong>Specialties:</strong> Mediterranean-inspired pitas and platters.</p>
+             <p><strong>Hours:</strong> 10:30 AM - 8:00 PM (Daily)</p>
+             <div class="dishes">
+                 <div class="dish" onclick="showDishDetails('gyro_pita', this.closest('.establishment'))">
+                     <img src="images/gyro_pita.jpg" alt="Gyro Pita">
+                     <p>Gyro Pita</p>
+                 </div>
+                 <div class="dish" onclick="showDishDetails('falafel_plate', this.closest('.establishment'))">
+                     <img src="images/falafel_plate.jpg" alt="Falafel Plate">
+                     <p>Falafel Plate</p>
+                 </div>
+                 <div class="dish" onclick="showDishDetails('hummus_platter', this.closest('.establishment'))">
+                     <img src="images/hummus_platter.jpg" alt="Hummus Platter">
+                     <p>Hummus Platter</p>
+                 </div>
+             </div>
+         </div>
+     
+         <!-- Establishment 3: Crave Food Hall -->
+         <div class="establishment">
+             <h2>Crave Food Hall</h2>
+             <p><strong>Location:</strong> Elliott University Center, UNCG Campus</p>
+             <p><strong>Specialties:</strong> Culinary stations with rotating menus.</p>
+             <p><strong>Hours:</strong> 11:00 AM - 7:30 PM (Daily)</p>
+             <div class="dishes">
+                 <div class="dish" onclick="showDishDetails('bbq_ribs', this.closest('.establishment'))">
+                     <img src="images/bbq_ribs.jpg" alt="BBQ Ribs">
+                     <p>BBQ Ribs</p>
+                 </div>
+                 <div class="dish" onclick="showDishDetails('sushi_rolls', this.closest('.establishment'))">
+                     <img src="images/sushi_rolls.jpg" alt="Sushi Rolls">
+                     <p>Sushi Rolls</p>
+                 </div>
+                 <div class="dish" onclick="showDishDetails('pasta_bar', this.closest('.establishment'))">
+                     <img src="images/pasta_bar.jpg" alt="Pasta Bar">
+                     <p>Pasta Bar</p>
+                 </div>
+             </div>
+         </div>
+     
+         <!-- Establishment 4: Student Choice Kitchen -->
+         <div class="establishment">
+             <h2>Student Choice Kitchen</h2>
+             <p><strong>Location:</strong> Elliott University Center, UNCG Campus</p>
+             <p><strong>Specialties:</strong> Student-influenced rotating menu.</p>
+             <p><strong>Hours:</strong> 11:00 AM - 8:00 PM (Mon-Fri), Closed Weekends</p>
+             <div class="dishes">
+                 <div class="dish" onclick="showDishDetails('vegan_bowl', this.closest('.establishment'))">
+                     <img src="images/vegan_bowl.jpg" alt="Vegan Power Bowl">
+                     <p>Vegan Power Bowl</p>
+                 </div>
+                 <div class="dish" onclick="showDishDetails('teriyaki_chicken', this.closest('.establishment'))">
+                     <img src="images/teriyaki_chicken.jpg" alt="Teriyaki Chicken">
+                     <p>Teriyaki Chicken</p>
+                 </div>
+                 <div class="dish" onclick="showDishDetails('loaded_fries', this.closest('.establishment'))">
+                     <img src="images/loaded_fries.jpg" alt="Loaded Fries">
+                     <p>Loaded Fries</p>
+                 </div>
+             </div>
+         </div>
+     </div>
+     
+     <script>
+     function showDishDetails(dish, establishmentElement) {
+         const dishes = {
+             chicken_wrap: { title: 'Grilled Chicken Wrap', image: 'images/chicken_wrap.jpg', description: 'Grilled chicken with lettuce and ranch in a soft tortilla.', price: '$6.99' },
+             veggie_bowl: { title: 'Veggie Bowl', image: 'images/veggie_bowl.jpg', description: 'Healthy bowl with quinoa, greens, and roasted veggies.', price: '$7.99' },
+             fruit_parfait: { title: 'Fruit Parfait', image: 'images/fruit_parfait.jpg', description: 'Layered yogurt, granola, and fresh fruits.', price: '$4.99' },
+     
+             gyro_pita: { title: 'Gyro Pita', image: 'images/gyro_pita.jpg', description: 'Lamb gyro wrapped in pita with tzatziki sauce.', price: '$7.49' },
+             falafel_plate: { title: 'Falafel Plate', image: 'images/falafel_plate.jpg', description: 'Crispy falafel served with hummus and pita.', price: '$6.99' },
+             hummus_platter: { title: 'Hummus Platter', image: 'images/hummus_platter.jpg', description: 'Creamy hummus with olives, pita, and veggies.', price: '$5.99' },
+     
+             bbq_ribs: { title: 'BBQ Ribs', image: 'images/bbq_ribs.jpg', description: 'Slow-cooked ribs with house-made BBQ sauce.', price: '$9.99' },
+             sushi_rolls: { title: 'Sushi Rolls', image: 'images/sushi_rolls.jpg', description: 'Fresh sushi rolls with salmon and avocado.', price: '$8.49' },
+             pasta_bar: { title: 'Pasta Bar', image: 'images/pasta_bar.jpg', description: 'Create your own pasta with various toppings.', price: '$10.99' },
+     
+             vegan_bowl: { title: 'Vegan Power Bowl', image: 'images/vegan_bowl.jpg', description: 'Plant-based bowl with tofu, quinoa, and greens.', price: '$8.99' },
+             teriyaki_chicken: { title: 'Teriyaki Chicken', image: 'images/teriyaki_chicken.jpg', description: 'Grilled chicken glazed in sweet teriyaki sauce.', price: '$9.49' },
+             loaded_fries: { title: 'Loaded Fries', image: 'images/loaded_fries.jpg', description: 'Fries topped with cheese, bacon, and ranch.', price: '$5.99' }
+         };
+     
+         let detailsDiv = establishmentElement.querySelector('.dish-details');
+         if (!detailsDiv) {
+             detailsDiv = document.createElement('div');
+             detailsDiv.className = 'dish-details';
+             establishmentElement.appendChild(detailsDiv);
+         }
+         detailsDiv.innerHTML = `<h3>${dishes[dish].title}</h3><img src="${dishes[dish].image}" alt="${dishes[dish].title}"><p>${dishes[dish].description}</p><p>${dishes[dish].price}</p>`;
+     }
+     </script>
+     
+
+
+      <!-- The end of the click section, the other section must load underneath -->
+
+
+
+
+
+      <!-- Food explore section starts here-->
+      <div class="coffee_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <h1 class="coffee_taital">BEST EATS NEAR UNCG</h1>
+               <div class="bulit_icon"><img src="images/bulit-icon.png"></div>
+            </div>
+         </div>
+         <div class="coffee_section_2">
+            <div id="main_slider" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="container-fluid">
+                        <div class="row">
+                           <div class="col-lg-3 col-md-6">
+                              <div class="coffee_img"><img src="images/img-1.png"></div>
+                              <h3 class="types_text">Fast Food & Chain Restaurants 🍔🍟 </h3>
+                              <p class="looking_text">Quick, tasty, and satisfying meals for when you're on the go!
+
+                              </p>
+                              <div class="read_bt"><a href="Expand1.html">Locations</a></div>
+                           </div>
+                           <div class="col-lg-3 col-md-6">
+                              <div class="coffee_img"><img src="images/img-2.png"></div>
+                              <h3 class="types_text">Coffee Shops & Cafés ☕🍪</h3>
+                              <p class="looking_text">Cozy cafés and sweet treats to fuel your study sessions!                              </p>
+                              <div class="read_bt"><a href="Expand2.html">Locations</a></div>
+                           </div>
+                           <div class="col-lg-3 col-md-6">
+                              <div class="coffee_img"><img src="images/img-3.png"></div>
+                              <h3 class="types_text">Asian & International Cuisine 🍣🥢</h3>
+                              <p class="looking_text">A world of flavors, from sushi to spicy curries, right near campus!                              </p>
+                              <div class="read_bt"><a href="Expand3.html">Locations</a></div>
+                           </div>
+                           <div class="col-lg-3 col-md-6">
+                              <div class="coffee_img"><img src="images/img-4.png"></div>
+                              <h3 class="types_text">Pizza & Italian 🍕🍝</h3>
+                              <p class="looking_text">Cheesy, saucy, and absolutely delicious – the best pizza & pasta around!                              </p>
+                              <div class="read_bt"><a href="Expand4.html">Locations</a></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container-fluid">
+                        <div class="row">
+                           <div class="col-lg-3 col-md-6">
+                              <div class="coffee_img"><img src="images/img-5.png"></div>
+                              <h3 class="types_text">Grocery & Convenience Stores 🛒🥪</h3>
+                              <p class="looking_text">Grab snacks, essentials, and quick bites whenever you need!                              </p>
+                              <div class="read_bt"><a href="Expand5.html">Locations</a></div>
+                           </div>
+                           <div class="col-lg-3 col-md-6">
+                              <div class="coffee_img"><img src="images/img-6.png"></div>
+                              <h3 class="types_text">Campus Dining 🍽️🎓</h3>
+                              <p class="looking_text">Easy, accessible, and student-friendly dining options on campus!                              </p>
+                              <div class="read_bt"><a href="Expand6.html">Locations</a></div>
+                           </div>
+                           <div class="col-lg-3 col-md-6">
+                              <div class="coffee_img"><img src="images/img-7.png"></div>
+                              <h3 class="types_text">Healthy & Vegetarian Options 🥗🌿</h3>
+                              <p class="looking_text">Wholesome, fresh, and plant-based meals to keep you energized!                              </p>
+                              <div class="read_bt"><a href="Expand7.html">Locations</a></div>
+                           </div>
+                           <div class="col-lg-3 col-md-6">
+                              <div class="coffee_img"><img src="images/img-8.png"></div>
+                              <h3 class="types_text">Late Night & Quick Bites 🌙🌮</h3>
+                              <p class="looking_text">Midnight cravings? These spots have you covered!                              </p>
+                              <div class="read_bt"><a href="Expand8.html">Locations</a></div>
+                           </div>
+                          
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+               <i class="fa fa-arrow-left"></i>
+               </a>
+               <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+               <i class="fa fa-arrow-right"></i>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- coffee section end -->
+
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+   </body>
+</html>
