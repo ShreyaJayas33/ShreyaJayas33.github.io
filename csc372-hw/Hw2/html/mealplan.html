@@ -1,152 +1,6 @@
 <!DOCTYPE html>
 <html>
    <head>
-
-    <style>
-        /* ======================= MEAL PLAN STYLING ======================= */
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-
-        /* Container */
-        .mealplan-container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: #222;
-        }
-
-        /* Flex Layout */
-        .mealplan-flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 30px;
-        }
-
-        /* =================== DISH LIST (LEFT SIDE) =================== */
-        .mealplan-dishes {
-            flex: 1;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .mealplan-dishes h2 {
-            font-size: 22px;
-            margin-bottom: 15px;
-            color: #444;
-        }
-
-        .mealplan-dishes ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .mealplan-dishes li {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #f0f0f0;
-            padding: 12px;
-            margin-bottom: 10px;
-            border-radius: 6px;
-            font-size: 16px;
-        }
-
-        .mealplan-dishes button {
-            background: #28a745;
-            color: white;
-            border: none;
-            padding: 6px 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        .mealplan-dishes button:hover {
-            background: #218838;
-        }
-
-        /* =================== MEAL PLAN (RIGHT SIDE) =================== */
-        .mealplan-summary {
-            flex: 1;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .mealplan-summary h2 {
-            font-size: 22px;
-            margin-bottom: 15px;
-            color: #444;
-        }
-
-        .mealplan-summary ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .mealplan-summary li {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #f0f0f0;
-            padding: 12px;
-            margin-bottom: 10px;
-            border-radius: 6px;
-            font-size: 16px;
-        }
-
-        .mealplan-summary button {
-            background: #dc3545;
-            color: white;
-            border: none;
-            padding: 6px 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        .mealplan-summary button:hover {
-            background: #c82333;
-        }
-
-        /* Total Cost */
-        h3 {
-            font-size: 20px;
-            margin-top: 15px;
-            color: #222;
-        }
-
-        #mealplan-total {
-            font-weight: bold;
-            color: #28a745;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .mealplan-flex {
-                flex-direction: column;
-            }
-
-            .mealplan-dishes, .mealplan-summary {
-                width: 100%;
-            }
-        }
-    </style>
       <!-- basic -->
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -219,31 +73,51 @@
 
     
 
-      <!--  Meal Plan code begginig   -->
-
-      <div class="container">
-        <h1>📋 Create Your Meal Plan</h1>
-    
-        <div class="mealplan-container">
-            <!-- Dish Selection List -->
-            <div class="dish-list">
-                <h2>🍽️ Available Dishes</h2>
-                <ul id="dish-menu">
-                    <!-- Dynamically added dishes -->
-                </ul>
+               <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+               <i class="fa fa-arrow-left"></i>
+               </a>
+               <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+               <i class="fa fa-arrow-right"></i>
+               </a>
             </div>
-    
-            <!-- Meal Plan Section -->
-            <div class="meal-plan">
-                <h2>📅 Your Meal Plan</h2>
-                <ul id="selected-meals">
-                    <!-- Dynamically added selected meals -->
-                </ul>
-                <h3>Total Cost: $<span id="total-cost">0.00</span></h3>
+         </div>
+      </div>
+      <!-- coffee section end -->
+
+
+
+    <!-- Meal Plan Section -->
+    <section class="mealplan-section">
+        <div class="container">
+            <h1>📋 Create Your Meal Plan</h1>
+
+            <div class="mealplan-flex">
+                <!-- Dish Selection List -->
+                <div class="mealplan-dish-list">
+                    <h2>🍽️ Available Dishes</h2>
+                    <ul id="dish-menu">
+                        <!-- Dynamically added dishes -->
+                    </ul>
+                </div>
+
+                <!-- Meal Plan Section -->
+                <div class="mealplan-summary">
+                    <h2>📅 Your Meal Plan</h2>
+                    <ul id="selected-meals">
+                        <!-- Dynamically added selected meals -->
+                    </ul>
+                    <h3>Total Cost: $<span id="total-cost">0.00</span></h3>
+                </div>
             </div>
         </div>
-    </div>
-    
+    </section>
+
+    <!-- JavaScript Files -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+
     <script>
     // Dishes Available for Meal Planning
     const dishes = {
@@ -266,7 +140,7 @@
         boneless_wings: { name: "Boneless Wings", price: 7.99 },
         loaded_fries: { name: "Loaded Fries", price: 5.99 }
     };
-    
+
     // Function to generate the dish list
     function populateDishMenu() {
         const dishMenu = document.getElementById("dish-menu");
@@ -277,11 +151,11 @@
             dishMenu.appendChild(dishItem);
         });
     }
-    
+
     // Function to add dish to meal plan
     let mealPlan = {};
     let totalCost = 0;
-    
+
     function addToMealPlan(dishKey) {
         if (!mealPlan[dishKey]) {
             mealPlan[dishKey] = { name: dishes[dishKey].name, price: dishes[dishKey].price, quantity: 1 };
@@ -290,62 +164,45 @@
         }
         updateMealPlan();
     }
-    
+
     // Function to update meal plan display
     function updateMealPlan() {
         const mealList = document.getElementById("selected-meals");
         mealList.innerHTML = "";
         totalCost = 0;
-    
+
         Object.keys(mealPlan).forEach(dishKey => {
             const mealItem = document.createElement("li");
             const meal = mealPlan[dishKey];
-    
+
             totalCost += meal.price * meal.quantity;
-    
+
             mealItem.innerHTML = `${meal.name} x${meal.quantity} - $${(meal.price * meal.quantity).toFixed(2)}
                 <button onclick="increaseQuantity('${dishKey}')">➕</button>
                 <button onclick="removeFromMealPlan('${dishKey}')">❌</button>`;
             mealList.appendChild(mealItem);
         });
-    
+
         document.getElementById("total-cost").innerText = totalCost.toFixed(2);
     }
-    
+
     // Function to increase quantity
     function increaseQuantity(dishKey) {
         mealPlan[dishKey].quantity++;
         updateMealPlan();
     }
-    
+
     // Function to remove dish from meal plan
     function removeFromMealPlan(dishKey) {
         delete mealPlan[dishKey];
         updateMealPlan();
     }
-    
+
     // Initialize menu on page load
     document.addEventListener("DOMContentLoaded", populateDishMenu);
     </script>
 
-
-
-
-      <!-- Meal Plan code end    -->
-
-
-               <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
-               <i class="fa fa-arrow-left"></i>
-               </a>
-               <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
-               <i class="fa fa-arrow-right"></i>
-               </a>
-            </div>
-         </div>
-      </div>
-      <!-- coffee section end -->
-
-      <!-- Javascript files-->
+     <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
@@ -355,4 +212,4 @@
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
    </body>
-</html>
+</html>>

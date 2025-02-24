@@ -1092,3 +1092,66 @@ textarea#comment.update_mail::placeholder {
     color: #d61c4e;
 }
 
+
+/* mealplan.html */
+
+/* ======================= MEAL PLAN PAGE STYLING ======================= */
+
+.mealplan-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffefd5;
+}
+
+.mealplan-section h1 {
+    font-size: 32px;
+    color: #222;
+}
+
+.mealplan-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px;
+}
+
+/* =================== DISH LIST (LEFT SIDE) =================== */
+.mealplan-dish-list, .mealplan-summary {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mealplan-dish-list h2, .mealplan-summary h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.mealplan-dish-list ul, .mealplan-summary ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.mealplan-dish-list li, .mealplan-summary li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f0f0f0;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mealplan-flex {
+        flex-direction: column;
+    }
+}
+
+
